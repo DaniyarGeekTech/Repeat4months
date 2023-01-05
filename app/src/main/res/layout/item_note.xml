@@ -14,7 +14,7 @@
         app:cardCornerRadius="8dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="#FFEB3B"
+            android:background="#FFCDDC39"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -46,12 +46,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="4dp"
                 android:text="28 11 22"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/itemTvDes"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/itemTvDes" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

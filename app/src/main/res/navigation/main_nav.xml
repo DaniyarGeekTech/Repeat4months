@@ -10,7 +10,11 @@
         android:id="@+id/noteFragment"
         android:name="com.example.repeat4months.ui.fragment.note.NoteFragment"
         android:label="fragment_note"
-        tools:layout="@layout/fragment_note" />
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_noteFragment_to_addNoteFragment2"
+            app:destination="@id/addNoteFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/addNoteFragment2"
         android:name="com.example.repeat4months.ui.fragment.addnote.AddNoteFragment"
@@ -18,8 +22,13 @@
         tools:layout="@layout/fragment_add_note" />
     <fragment
         android:id="@+id/onBoardFragment"
-        android:name="com.example.repeat4months.ui.board.OnBoardFragment"
+        android:name="com.example.repeat4months.ui.fragment.board.OnBoardFragment"
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.repeat4months.ui.fragment.contact.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
 
 </navigation>

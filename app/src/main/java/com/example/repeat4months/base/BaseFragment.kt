@@ -9,11 +9,9 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.example.repeat4months.R
-import com.example.repeat4months.R.*
 
 typealias Inflate<T> = (LayoutInflater,ViewGroup?, Boolean) -> T
 abstract class BaseFragment<VB : ViewBinding>(private  val inflate: Inflate<VB>) : Fragment() {
-
 
     private var _binding: VB? = null
     protected val binding get() = _binding
@@ -28,14 +26,12 @@ abstract class BaseFragment<VB : ViewBinding>(private  val inflate: Inflate<VB>)
     ): View? {
         _binding = inflate.invoke(inflater, container, false)
         val navHostFragment = requireActivity().supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         _controller = navHostFragment.navController
         setupUI()
         setupObserver()
         return binding?.root
     }
-
     abstract fun setupUI()
-    open fun setupObserver(){ }
-
+    open fun setupObserver(){}
 }
